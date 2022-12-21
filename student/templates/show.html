@@ -1,0 +1,28 @@
+{% extends 'secondbase.html' %}
+{% load static %}
+{% block title %} student details{% endblock %}
+{% block content %}
+<h3 class="text-center">Student Details</h3>
+<table class="container table table-dark table-stripped text-center">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phonenumber</th>
+        <th>Place</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for i in forms %} 
+    <tr>
+        <td>{{ i.student_name}}</td>
+        <td>{{ i.student_email}}</td>
+        <td>{{ i.student_phone}}</td>
+        <td>{{ i.student_address}}</td>
+        <td>{{ i.student_place}}</td>
+        <td><a href="{% url 'edit'%}?edit={{i.student_id}}" class="btn text-light btn-outline-secondary">Edit</a></td>
+        <td><a href="{% url 'delete'%}?delete={{i.student_id}}" class="btn text-light btn-outline-secondary">Delete</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

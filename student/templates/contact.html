@@ -1,0 +1,47 @@
+{% extends 'mainbase.html' %}
+{% block title %}contact{% endblock %}
+{% block content %}
+<body style="background-color:pink;">
+{% if out == 1 %}
+<div class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+
+</div>
+{% endif %}
+<div class ="container ml-5 ">
+<p class="text-muted">call us on</p>
+<p>call: +91 9946240962</p>
+<p class="text-muted">Email us at</p>
+<p>Enquiry: contact@madappalycollage.com</p>
+<p>Placement Cell: hr@madappalycollage.com</p>
+</div>
+<div class="container ml-5">
+    <h5>how we can be of assistance</h5>
+    <P>if you require clarification on any of courses or the admission process,we are happy to help</p>
+        <form action="" method="post">
+            {%  csrf_token %}
+            <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form label" >name</label>
+                <div class="col-sm-10">
+                <input type="text" class="form -control" id="name" name="name">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="email" class="col-sm-2 col-form label" >email</label>
+                <div class="col-sm-10">
+                <input type="email" class="form -control" id="email" name="email">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="phno" class="col-sm-2 col-form label" >phone number</label>
+                <div class="col-sm-10">
+                <input type="number" class="form -control" id="phno" name="phno">
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-dark">submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+{% endblock %}

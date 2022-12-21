@@ -1,0 +1,33 @@
+{% extends 'secondbase.html' %} 
+{% block title %} edit {% endblock %} 
+{% block content %} 
+<h2 class="text-center mb-5">Student edit form</h2>
+<form action="" method="POST" class="container">
+    {% csrf_token %} 
+    {% for i in forms %} 
+    <div class="input-group mb-3">
+        <span class="input-group-text bg-dark text-secondary w-25">Student Name</span>
+        <input type="text" aria-label="First name" class="form-control" name="studen_name" placeholder="{{i.student_name}}">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text bg-dark text-secondary w-25">Student Email</span>
+        <input type="text" aria-label="First name" class="form-control" name="student_email" placeholder="{{i.student_email}}">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text bg-dark text-secondary w-25">Student Phonenumber</span>
+        <input type="text" aria-label="First name" class="form-control" name="student_phone" placeholder="{{i.student_phone}}">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text bg-dark text-secondary w-25">Student Address</span>
+        <input type="text" aria-label="First name" class="form-control" name="student_address" placeholder="{{i.student_address}}">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-dark text-secondary w-25">Student Place</span>
+            <input type="text" aria-label="First name" class="form-control" name="student_address" placeholder="{{i.student_place}}">
+            </div>
+        <div class="d-flex justisfy-content-center">
+            <input type="submitt" value="edit" class="btn btn text-secondary w-25">
+        </div>
+        {% endfor %}
+        {% endblock %}
+        </form>

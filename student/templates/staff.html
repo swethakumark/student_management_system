@@ -1,0 +1,24 @@
+{% extends 'secondbase.html' %}
+{% load static %}
+{% block title %} staff {% endblock %}
+{% block content %}
+<h1 class="text-center">Staff Details</h1>
+<table class="container table table-dark table-stripped">
+    <tr>
+        <th>Staff name</th>
+          <th> Staff Email</th>
+          <th> Staff Phonenumber</th>
+      </tr>
+      {% for i in form %}
+      <tr>
+          <td>{{i.name}}</td>
+          <td>{{i.email}}</td>
+          <td>{{i.phno}}</td>
+     
+      </tr>
+      {% endfor %}
+    </table>
+   
+
+
+{% endblock %}

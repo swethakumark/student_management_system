@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- s.com/icon?family=Material+Icons" rel="stylesheet"> -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapi -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<style>
+    body{
+    background-image: url( "{% static 'image/artgallery.webp' %}");
+    height: 650px;
+    padding: 100px 0 0 0;  
+    min-height: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center 
+    }
+</style>
+<body style="background-color:powderblue;">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="">madappaly</a>
+          <span class="navbar-text">
+            <a class="btn btn-outline-secondary" href="{% url 'mainhome' %}">Home</a>
+
+          </span>
+      </nav>
+    <div class="sndblock">
+        <div class="mainblock">
+
+            <div class="set1" id="btnn">
+                <div class="butn">
+                    <button id="sigup">Sign Up</button>
+                    <button id="sigin" onclick="window.location.href = '../login'">Sign In</button>
+                </div>
+            </div>
+
+            <div class="set2">
+                <div class="main">
+
+                    <div class="heading" id="new">
+                        <H2>SIGN UP</H2>
+                    </div>
+
+                    <div class="px">
+                        <p id="text"></p>
+                    </div>
+
+                    <div class="fld" id="frm">
+                        <form  method="post">
+
+                            {% csrf_token %}
+                            <div> {% for message in messages %}
+                                <h3>{{message}}</h3>
+                                {% endfor %}</div>
+                            <div>
+                                <input id="name" name="name" type="text" placeholder="name" onchange="validname()" required>
+                            </div>
+                            <div>
+                                <input id="email" name="email" type="text" placeholder="Email" onchange="validemail()">
+                            </div>
+                            <div>
+                                <input id="ph" name="phno" type="text" placeholder="phone number" onchange="validph()">
+                            </div>
+                            <div>
+                                <input id="pass1" name="password" type="password" placeholder="password" onchange="validpass()">
+                            </div>
+                            <div>
+                                <input id="pass2" name="password2" type="password" placeholder="conform password" onchange="validpassconform()">
+                            </div>
+                            <div class="buton">
+                                <input type="submit" value="signup" id="signup">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="{% static 'js/signup.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>

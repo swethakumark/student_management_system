@@ -1,0 +1,32 @@
+{% extends 'secondbase.html' %}
+{% load static %}
+{% block title %} main home{%endblock%}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+        height: 50vh;
+        width:80h;
+    }
+</style>
+</head>
+<body>
+    <img src="{% static 'images\logo1.jpg'  %}"  style = 'float:right;' width=300 px/>
+    <div class="container" style="text-align: left;">
+        <h4>About</h4>
+        <p>Government College Madappally is situated on a green-clad hillock, 7 Kms north of Vatakara, adjacent to the Arabian Ocean in the West. The campus is rich with greenery, having all the lushness and serenity of a rural retreat. The college was established in 1958 with six decades of glowing academic record, thereafter. It was shifted to a new building with new courses in 1963, marking the first major shift since its beginning. In the meanwhile, the college has become the main hub of higher education in northern Malabar and north Kerala. In 1968, the college was separated from the University of Kerala and affiliated to the University of Calicut. Thereafter, the college has been witnessing a period of steady growth and progress in terms of the in-take of students and the commencement of new academic disciplines.. Initially, the college had just two divisions of pre-university courses. At present, it can boast of 10 UG Programmes, 8 PG Programmes and 4 Research Centres in Humanities, Commerce and Science.
+        </p>
+        <li>Adress:College Post, College Road, Vadakara Kozhikode, Madappallly, Kerala 673102</li>
+        <li>Phone: 0496 251 2587</li>
+    </div>
+    </body>
+</html>
+{% endblock %}
+
+

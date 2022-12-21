@@ -1,0 +1,40 @@
+{% extends 'secondbase.html' %}
+{% load static %}
+{% block title %} edit profile {% endblock %}
+{% block content %}
+
+<div class="card text-center">
+    <div class="card-header">
+        <h1 class="text-center">Edit profile</h1>
+    </div>
+    <div class="card-body ">
+        <form action="" method="POST" class="container">
+            {% for message in messages %}
+            <h5 class="text-center text-secondary"> {{ message}}</h5>
+            {% endfor %}
+            {% csrf_token %}{% for i in forms %}
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-dark text-secondary w-25">Name</span>
+            <input type="text" aria-label="Firstname" class="form-control" name="name" placeholder="{{i.name}}">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-dark text-secondary w-25">Email</span>
+            <input type="text" aria-label="Firstname" class="form-control" name="email" placeholder="{{i.email}}">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-dark text-secondary w-25">Password</span>
+            <input type="text" aria-label="Firstname" class="form-control" name="password" placeholder="{{i.password}}">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-dark text-secondary w-25">PhoneNumber</span>
+            <input type="text" aria-label="Firstname" class="form-control" name="Phno" placeholder="{{i.phno}}">
+        </div>
+        <div class="card-footer text-muted d-flex justify-content-center">
+            <input type="submit" value="edit" class="btn btn-dark text-secondary w-25">
+        </div>
+        {% endfor %}
+        </form>
+    </div>
+{% endblock %}
+
+

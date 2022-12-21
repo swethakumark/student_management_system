@@ -1,0 +1,80 @@
+{% extends 'mainbase.html' %}
+{% load static %}
+
+{% block title%}
+About
+{% endblock %}
+
+{% block content%}
+<h3 style="text-align:center" >Gallery</h3><hr><br>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .column {
+                float: left;
+                width: 33.33%;
+                padding: 20px;
+            }
+              
+            
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+              }
+              
+        </style>
+    </head>
+    <body  style="background-color:lightgreen;" >
+        <div class="row">
+            <div class="column">
+              <h4>Libraries</h4>
+              <img src="{% static 'images\lib1.jpg'  %}" alt="art" style="width:50%">
+              <li>College and university libraries provide access to books, magazines, databases, and academic journals, which students can find on campus or online. Librarians can also assist learners when navigating online databases, using specialized search tools, and locating research materials.
+            </li>
+            </div>
+            <div class="column">
+              <h4>Arts</h4>
+              <img src="{% static 'images\art.jpg'  %}" alt="lib" style="width:50%">
+              <li>The purpose of the Celebration of the Arts Day is to highlight our students' creative ambition and drive and to give them a chance to showcase their hard work and inspiration. Since creativity and innovation do not come in a single form or medium, our showcase highlights student work from a diverse range of genres; including music, poetry, theatre, visual art and more at the Celebration of the Arts Day.</li>
+            </li>
+            </div>
+            <div class="column">
+              <h4>Class</h4>
+              <img src="{% static 'images\class.jpg'  %}" alt="art" style="width:50%">
+              <li>Created for administrators and staff to help create safe, respectful classrooms. Explore our Safe Classrooms articles in this time of increased social isolation. Types of Bullying. Bullying Effects. Bullying Prevention. Bullying Statistics.
+            </li>
+            </div>
+            <div class="column">
+                <h4>Physics Lab</h4>
+                <img src="{% static 'images\p.jpg'  %}" alt="lib" style="width:50%">
+                <li>It is in the laboratory that physics students learn to practice the activities of scientists - asking questions, performing procedures, collecting data, analyzing data, answering questions, and thinking of new questions to explore.
+                </li>
+              </li>
+              </div>
+              <div class="column">
+                <h4>Botanical Garden</h4>
+                <img src="{% static 'images\garden.jpg'  %}" alt="art" style="width:50%">
+                <li>The campus of Government College, Madappally was a barren land till 1982 when, the nature loving teachers and students of the college decided to initiate the process of aforestation of the hillock. As a first step a nature club was registered with World Wide Fund for Nature (WWF), Trivandrum (Register No.S-KER/848 dated 13.10.1982). The following years witnessed the transformation of the barren, rocky landscape into a lush green campus garden. 
+              </li>
+              </div>
+              <div class="column">
+                <h4>NCC</h4>
+                <img src="{% static 'images\Ncc.jpg'  %}" alt="art" style="width:50%">
+                <li>Government College Madappally has an active unit of NCC which functions to develop character comradeship and the capacity for leadership among the students. It provides service training to its members in  order to stimulate interest in the defence of the Nation. The NCC cadets are actively involved in the social service activities around the locality. The NCC unit of the college makes its presence felt through representations in the annual Republic Day parade.
+                </li>
+              </div>
+          </div>
+          
+
+                <script src="" async defer></script>
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'secondbase.html' %}
+{% load static %}
+{% block title %} my profile {% endblock %}
+{% block content %}
+<div class="card text-center">
+    <div class="card-header">
+        <h1 class="text-center">my profile</h1>
+    </div>
+    <div class="card-body container">
+        <div>
+            {% for i in customer%}
+        <div class="input-group mb-3">
+            <p class="inpu-group-text bg-dark text-secondary w-25">Name</p>
+            <p class="from-control">{{i.name}}</p>
+        </div>
+        <div class="input-group mb-3">
+            <span class="inpu-group-text bg-dark text-secondary w-25">Phone Number</span>
+            <span class="from-control">{{ i.phno}}</span>
+        </div>
+        <div class="input-group mb-3">
+            <span class="inpu-group-text bg-dark text-secondary w-25">Email</span>
+            <span class="from-control">{{ i.email}}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="card-footer text-muted d-flex justify-content-end">
+    <a href="{% url 'editprofile' %}" class="btn btn-dark">Edit Profile</a>
+</div>
+</div>
+{% endblock %}

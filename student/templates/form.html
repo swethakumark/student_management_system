@@ -1,0 +1,23 @@
+{% extends 'secondbase.html' %}
+{% load crispy_forms_tags %}
+
+{% block title%}Student
+{% endblock %}
+
+{% block content%}
+<h1 class="text-center">Student Details</h1>
+<hr>
+<div class="container w-25 text-center p-3 my-5 bg-dark">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+<button class="btn btn-dark mb-4" type="submit">Submit</button>
+        <div>
+        {% for message in message %} 
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'secondbase.html' %}
+{% block title %} Enquiry Details{% endblock %}
+{% block content%}
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h3 class="text-center">Enquiry Details</h3>
+        <table class="container table table-dark table-striped text-center">
+            <tr>
+              <th>Name</th>
+                <th>Email</th>
+                <th>Phonenumber</th>
+            </tr>
+            {% for i in form %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.email}}</td>
+            {% endfor %}
+            </tr>
+          </table>        
+        <script src="" async defer></script>
+    </body>
+</html>
+{% endblock %}
